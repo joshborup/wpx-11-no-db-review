@@ -6,9 +6,9 @@ export default function MovieList(props) {
   let mappedMovies = props.movieList.map(movie => {
     return (
       <div key={movie.id}>
+        <img src={posterBasePath + movie.poster_path} alt="" />
         <h1>{movie.title}</h1>
         <h2>{movie.popularity}</h2>
-        <img src={posterBasePath + movie.poster_path} alt="" />
         <span>{movie.overview}</span>
         <button onClick={() => props.addToFavorites(movie)}>
           Add To Favorites

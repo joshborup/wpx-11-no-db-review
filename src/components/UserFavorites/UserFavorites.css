@@ -12,8 +12,9 @@
   justify-content: center;
   flex-direction: column;
   max-width: 150px;
+  margin: 10px;
 }
 
-.favorites-container > div > img {
+.favorites-container > div img {
   width: 100%;
 }

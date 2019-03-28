@@ -6,10 +6,10 @@ export default function UserFavorites(props) {
   let mappedFavorites = props.favorites.map(movie => {
     return (
       <div key={movie.id}>
+        <img src={posterBasePath + movie.poster_path} alt="" />
         <h1>{movie.title}</h1>
         <h2>{movie.popularity}</h2>
-        <img src={posterBasePath + movie.poster_path} alt="" />
-        <span>{movie.overview}</span>
+        <span>{movie.overview.substring(0, 150)}</span>
       </div>
     );
   });
